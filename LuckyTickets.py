@@ -1,14 +1,11 @@
 def lucky_tickets():
-
     half_of_number_of_digits = 3
     number_of_tickets = 0
     sum_of_all_digits = 0
     number_of_lucky_tickets = 0
 
     with open('input.txt', 'r') as file:
-
         for ticket in file:
-            
             ticket = ticket.strip()
             number_of_tickets += 1
             sum_first_three_digits = 0
@@ -16,7 +13,7 @@ def lucky_tickets():
 
             if len(ticket) != half_of_number_of_digits + half_of_number_of_digits:
                 raise Exception('The ticket number must consist of six digits')
-                
+
             for j in range(half_of_number_of_digits):
                 try:
                     sum_first_three_digits += int(ticket[j])
